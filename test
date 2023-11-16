@@ -1,0 +1,553 @@
+{
+  "name": "V&C",
+  "revision": "0.0.1",
+  "game": "",
+  "genre": "generic",
+  "publisher": "",
+  "url": "",
+  "notes": "",
+  "wip": false,
+  "manifest": {
+    "assetTaxonomy": {
+      "Armor": {
+        "stats": {
+          "Hardness": {
+            "group": "Protection",
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Integrity": {
+            "group": "Protection",
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Poise": {
+            "group": "Protection",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Requirements": {
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Character": {
+        "allowed": {
+          "classifications": [
+            "Traits",
+            "Slot",
+            "Station",
+            "Item Loadout",
+            "Skill List"
+          ]
+        },
+        "aspects": {
+          "Group Includes": true,
+          "Rename": false
+        },
+        "removed": {
+          "stats": {
+            "Attributes": {}
+          }
+        },
+        "stats": {
+          "Agility": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Aim": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 5,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Defense": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Deflection": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 6,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Focus": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Load": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 8,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Offense": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Speed": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Strategy": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 5,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Tactics": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Utility": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 6,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Will": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Wounds": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Item": {
+        "stats": {
+          "XP Value": {
+            "statType": "numeric",
+            "value": 0
+          }
+        }
+      },
+      "Item Loadout": {
+        "allowed": {
+          "classifications": [
+            "Tool",
+            "Armor",
+            "Weapon",
+            "Item"
+          ]
+        },
+        "removed": {
+          "stats": {
+            "Value": {}
+          }
+        },
+        "stats": {
+          "XP Value": {
+            "statType": "numeric",
+            "value": 0
+          }
+        }
+      },
+      "Skill List": {
+        "stats": {
+          "Awareness": {
+            "dynamic": true,
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Calculate": {
+            "dynamic": true,
+            "statOrder": 8,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Dexterity": {
+            "dynamic": true,
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Endurance": {
+            "dynamic": true,
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Enviornment": {
+            "dynamic": true,
+            "statOrder": 11,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Identify": {
+            "dynamic": true,
+            "statOrder": 5,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Magic": {
+            "dynamic": true,
+            "statOrder": 9,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Observe": {
+            "dynamic": true,
+            "statOrder": 7,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Social": {
+            "dynamic": true,
+            "statOrder": 7,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Society": {
+            "dynamic": true,
+            "statOrder": 10,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Stealth": {
+            "dynamic": true,
+            "statOrder": 6,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Technique": {
+            "dynamic": true,
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Slot": {
+        "keywords": {
+          "Keywords": [
+            "Arcane 1",
+            "Arcane 2"
+          ]
+        }
+      },
+      "Station": {
+        "text": "Story\nWanderer. \nMany individuals in Alaria at some point find themselves looking for a new path\nforward. Perhaps they were a scholar that was exiled from the University for exploring\nforbidden magic, a mercenary looking for a new client, or just a simple tourist. Through\nwhatever circumstance, wanderers find it hard to stay in one place.\n\nInfluence\nUnrecognized. \nWanderers move from place to place, and often remain unrecognized\nby the public, law enforcement, or other factions. Wanderers often adopt new names\nfor when they would rather not have their past catch up to them. In addition, during an\nadventure, a Wanderer may choose to not loose or gain Reputation with a single Faction\nselected during the adventure.\n\nAcquired Skills\nResourceful. \nWanderers often prove to be adaptable and resourceful in new environments\nand gain 1 specialization to any skill.\n\nWealth\nFinders Keepers. \nWanderers may keep a single item that they come across in their travels\nthat they are able to fit on their person and is worth 3XP or less. They must end the\nadventure in possession of the item. This item does not count towards the Squad XP value."
+      },
+      "Tool": {
+        "stats": {
+          "Requirements": {
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Traits": {
+        "stats": {
+          "Requirements": {
+            "dynamic": false,
+            "statType": "term",
+            "tracked": false,
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Weapon": {
+        "aspects": {
+          "Group Includes": false
+        },
+        "keywords": {
+          "Keywords": [
+            "Grapple",
+            "Quickdraw"
+          ]
+        },
+        "stats": {
+          "Force": {
+            "dynamic": false,
+            "group": "Effect",
+            "statOrder": 3,
+            "statType": "numeric",
+            "tracked": false,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Penetration": {
+            "dynamic": false,
+            "group": "Effect",
+            "statOrder": 2,
+            "statType": "numeric",
+            "tracked": false,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Range": {
+            "dynamic": false,
+            "statType": "term",
+            "text": "M",
+            "tracked": false,
+            "value": "M",
+            "visibility": "normal"
+          },
+          "Requirements": {
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Wounds": {
+            "dynamic": false,
+            "group": "Effect",
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": false,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      }
+    },
+    "assetCatalog": {
+      "Armor§Gambeson": {
+        "stats": {
+          "Hardness": {
+            "value": 1
+          },
+          "Integrity": {
+            "value": 1
+          },
+          "Poise": {
+            "value": 1
+          },
+          "Requirements": {
+            "value": "Endurance 1"
+          }
+        }
+      },
+      "Armor§Round Shield": {
+        "stats": {
+          "Hardness": {
+            "value": 3
+          },
+          "Integrity": {
+            "value": 2
+          },
+          "Poise": {
+            "value": 2
+          },
+          "Requirements": {
+            "value": "Endurance 3"
+          }
+        }
+      },
+      "Character§Bounty Hunter": {
+        "allowed": {
+          "classifications": []
+        },
+        "assets": {
+          "included": [],
+          "traits": []
+        }
+      },
+      "Character§Ken": {},
+      "Item Loadout§Loadout 1": {},
+      "Item§Enchanted Ring": {},
+      "Roster§Pregens": {
+        "allowed": {
+          "classifications": [
+            "Character",
+            "Item",
+            "Weapon",
+            "Armor",
+            "Tool"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Character§Bounty Hunter"
+          ]
+        },
+        "removed": {
+          "allowed": {
+            "classifications": [
+              "Weapon"
+            ]
+          }
+        }
+      },
+      "Skill List§Bounty Hunter Skills": {},
+      "Slot§Arcane Bolts": {
+        "removed": {
+          "keywords": {
+            "Keywords": [
+              "Arcane 2"
+            ]
+          }
+        },
+        "text": "Action: Weapon Attack\nEffect: 2x (1W, 0P, -2F), P, Range 8 tiles\n\nGain the ability to fire magical projectiles at range"
+      },
+      "Slot§Fireball": {
+        "removed": {
+          "keywords": {
+            "Keywords": [
+              "Arcane 1"
+            ]
+          }
+        },
+        "text": "Action: Standard (AOE)\nTarget: 3 tile radius AOE, Range 20\nEffect: Attack against all Entities in AOE (3W, E)\n\nLaunch a large fireball in the target direction, scorching\neverything inside the radius."
+      },
+      "Station§Wanderer": {},
+      "Tool§Powered Glider": {},
+      "Traits§Improved Unarmed Strike": {
+        "removed": {
+          "text": ""
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1"
+          }
+        },
+        "text": "Unarmed Strike becomes a weapon with (1W, 1P, 1F). Whenever you take a Standard Action, you can make an extra Unarmed Strike immediately before or after the Action. Gain +1 max Will."
+      },
+      "Traits§Spear and Shield": {
+        "removed": {
+          "text": ""
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, Defense 1"
+          }
+        },
+        "text": "You may wield all spear and polearm\ntype weapons alongside a shield"
+      },
+      "Weapon§Bow": {
+        "removed": {
+          "keywords": {
+            "Keywords": [
+              "Grapple",
+              "Quickdraw"
+            ]
+          }
+        },
+        "stats": {
+          "Force": {
+            "value": -1
+          },
+          "Penetration": {
+            "value": 1
+          },
+          "Range": {
+            "value": "20"
+          },
+          "Requirements": {
+            "value": "Technique 2, Dexterity 2"
+          },
+          "Wounds": {
+            "value": 1
+          }
+        }
+      },
+      "Weapon§Dagger": {
+        "stats": {
+          "Force": {
+            "value": -1
+          },
+          "Penetration": {
+            "value": 1
+          },
+          "Requirements": {
+            "value": ""
+          },
+          "Wounds": {
+            "value": 1
+          }
+        }
+      },
+      "Weapon§Improved Unarmed Strike": {
+        "keywords": {
+          "Grapple": []
+        },
+        "removed": {
+          "keywords": {
+            "Keywords": [
+              "Quickdraw"
+            ]
+          }
+        },
+        "stats": {
+          "Force": {
+            "value": -1
+          },
+          "Penetration": {
+            "value": 1
+          },
+          "Wounds": {
+            "value": 1
+          }
+        }
+      }
+    },
+    "gameModes": {},
+    "theme": {}
+  }
+}
