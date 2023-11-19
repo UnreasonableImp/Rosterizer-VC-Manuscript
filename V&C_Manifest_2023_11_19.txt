@@ -1,0 +1,1072 @@
+{
+  "name": "V&C",
+  "revision": "0.0.1",
+  "game": "",
+  "genre": "generic",
+  "publisher": "",
+  "url": "",
+  "notes": "",
+  "wip": true,
+  "manifest": {
+    "assetTaxonomy": {
+      "Armor": {
+        "stats": {
+          "Hardness": {
+            "group": "Protection",
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Integrity": {
+            "group": "Protection",
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Poise": {
+            "group": "Protection",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Requirements": {
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Character": {
+        "allowed": {
+          "classifications": [
+            "Traits",
+            "Slot",
+            "Station",
+            "Item Loadout",
+            "Skill List",
+            "Type"
+          ]
+        },
+        "aspects": {
+          "Group Includes": true,
+          "Rename": false
+        },
+        "removed": {
+          "stats": {
+            "Attributes": {}
+          }
+        },
+        "stats": {
+          "Agility": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Aim": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 5,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Defense": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Deflection": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 6,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Focus": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Load": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 8,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Offense": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Speed": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Strategy": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 5,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Tactics": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Utility": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 6,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Will": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Wounds": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Item": {
+        "stats": {
+          "XP Value": {
+            "statType": "numeric",
+            "value": 0
+          }
+        }
+      },
+      "Item Loadout": {
+        "allowed": {
+          "classifications": [
+            "Tool",
+            "Armor",
+            "Weapon",
+            "Item"
+          ]
+        },
+        "removed": {
+          "stats": {
+            "Value": {}
+          }
+        },
+        "stats": {
+          "XP Value": {
+            "statType": "numeric",
+            "value": 0
+          }
+        }
+      },
+      "Skill List": {
+        "stats": {
+          "Awareness": {
+            "dynamic": true,
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Calculate": {
+            "dynamic": true,
+            "statOrder": 8,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Dexterity": {
+            "dynamic": true,
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Endurance": {
+            "dynamic": true,
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Enviornment": {
+            "dynamic": true,
+            "statOrder": 11,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Identify": {
+            "dynamic": true,
+            "statOrder": 5,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Magic": {
+            "dynamic": true,
+            "statOrder": 9,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Observe": {
+            "dynamic": true,
+            "statOrder": 7,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Social": {
+            "dynamic": true,
+            "statOrder": 7,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Society": {
+            "dynamic": true,
+            "statOrder": 10,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Stealth": {
+            "dynamic": true,
+            "statOrder": 6,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Technique": {
+            "dynamic": true,
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Slot": {
+        "keywords": {
+          "Keywords": [
+            "Arcane 1",
+            "Arcane 2"
+          ]
+        }
+      },
+      "Station": {
+        "text": "Story\nWanderer. \nMany individuals in Alaria at some point find themselves looking for a new path\nforward. Perhaps they were a scholar that was exiled from the University for exploring\nforbidden magic, a mercenary looking for a new client, or just a simple tourist. Through\nwhatever circumstance, wanderers find it hard to stay in one place.\n\nInfluence\nUnrecognized. \nWanderers move from place to place, and often remain unrecognized\nby the public, law enforcement, or other factions. Wanderers often adopt new names\nfor when they would rather not have their past catch up to them. In addition, during an\nadventure, a Wanderer may choose to not loose or gain Reputation with a single Faction\nselected during the adventure.\n\nAcquired Skills\nResourceful. \nWanderers often prove to be adaptable and resourceful in new environments\nand gain 1 specialization to any skill.\n\nWealth\nFinders Keepers. \nWanderers may keep a single item that they come across in their travels\nthat they are able to fit on their person and is worth 3XP or less. They must end the\nadventure in possession of the item. This item does not count towards the Squad XP value."
+      },
+      "Storage": {
+        "allowed": {
+          "classifications": [
+            "Armor",
+            "Item",
+            "Tool",
+            "Weapon",
+            "Item Loadout"
+          ]
+        }
+      },
+      "Tool": {
+        "stats": {
+          "Requirements": {
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Traits": {
+        "keywords": {
+          "Trait Type": []
+        },
+        "stats": {
+          "Requirements": {
+            "dynamic": false,
+            "statType": "term",
+            "tracked": false,
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Type": {},
+      "Weapon": {
+        "aspects": {
+          "Group Includes": false
+        },
+        "keywords": {
+          "Keywords": [
+            "Grapple",
+            "Quickdraw"
+          ]
+        },
+        "stats": {
+          "Force": {
+            "dynamic": false,
+            "group": "Effect",
+            "statOrder": 3,
+            "statType": "numeric",
+            "tracked": false,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Penetration": {
+            "dynamic": false,
+            "group": "Effect",
+            "statOrder": 2,
+            "statType": "numeric",
+            "tracked": false,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Range": {
+            "dynamic": false,
+            "statType": "term",
+            "text": "M",
+            "tracked": false,
+            "value": "M",
+            "visibility": "normal"
+          },
+          "Requirements": {
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Wounds": {
+            "dynamic": false,
+            "group": "Effect",
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": false,
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      }
+    },
+    "assetCatalog": {
+      "Armor§Gambeson": {
+        "stats": {
+          "Hardness": {
+            "value": 1
+          },
+          "Integrity": {
+            "value": 1
+          },
+          "Poise": {
+            "value": 1
+          },
+          "Requirements": {
+            "value": "Endurance 1"
+          }
+        }
+      },
+      "Armor§Round Shield": {
+        "stats": {
+          "Hardness": {
+            "value": 3
+          },
+          "Integrity": {
+            "value": 2
+          },
+          "Poise": {
+            "value": 2
+          },
+          "Requirements": {
+            "value": "Endurance 3"
+          }
+        }
+      },
+      "Character§Bounty Hunter": {
+        "allowed": {
+          "classifications": []
+        },
+        "assets": {
+          "included": [],
+          "traits": []
+        }
+      },
+      "Character§Ken": {},
+      "Item Loadout§Loadout 1": {},
+      "Item§Enchanted Ring": {},
+      "Roster§Units": {
+        "allowed": {
+          "classifications": [
+            "Character",
+            "Item",
+            "Weapon",
+            "Armor",
+            "Tool"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Character§Bounty Hunter"
+          ]
+        },
+        "removed": {
+          "allowed": {
+            "classifications": [
+              "Weapon"
+            ]
+          }
+        }
+      },
+      "Skill List§Bounty Hunter Skills": {},
+      "Slot§Arcane Bolts": {
+        "removed": {
+          "keywords": {
+            "Keywords": [
+              "Arcane 2"
+            ]
+          }
+        },
+        "text": "Action: Weapon Attack\nEffect: 2x (1W, 0P, -2F), P, Range 8 tiles\n\nGain the ability to fire magical projectiles at range"
+      },
+      "Slot§Fireball": {
+        "removed": {
+          "keywords": {
+            "Keywords": [
+              "Arcane 1"
+            ]
+          }
+        },
+        "text": "Action: Standard (AOE)\nTarget: 3 tile radius AOE, Range 20\nEffect: Attack against all Entities in AOE (3W, E)\n\nLaunch a large fireball in the target direction, scorching\neverything inside the radius."
+      },
+      "Station§Wanderer": {},
+      "Storage§Party Storage": {},
+      "Tool§Powered Glider": {},
+      "Traits§Acrobatics": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 1"
+          }
+        },
+        "text": "Each turn, you may designate a\nnumber of linked tiles up to half\nof your Speed. Movement in those\nsquares do not provoke, and do not\ncount as Difficult Terrain."
+      },
+      "Traits§An Eye for an Eye": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, Defense 1"
+          }
+        },
+        "text": "You may choose to take an incoming\nAttack in melee from a combatant\nyou currently threaten. Doing so\nallows you to make an AOO on the\nattacking creature as a Reaction and\nthe Attacks resolve simultaneously.\nGain +1 max Will."
+      },
+      "Traits§Assassin's Technique": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Tactics 1"
+          }
+        },
+        "text": "• Improve your Proficiency in\nStealth by 1\n• Underhanded: You can feint\nwith a Weapon as a Move\nAction. You are considered\nKnown rather than Observed\nwith the first Attack you make\nthis turn with the feinted\nweapon. You may feint as a\nSwift Action if you are using a\nWeapon with Quick-draw.\n• Silent Strike: When you use an\nAimed Strike, you may Attack\nwithout automatically being\nrevealed."
+      },
+      "Traits§Barrage": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 3, lvl 3"
+          }
+        },
+        "text": "You may make any Standard Action\nyou can perform as a Bonus Action\ncosting 2 Focus"
+      },
+      "Traits§Bullrush": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Defense 2, Agility 1, lvl 2"
+          }
+        },
+        "text": "When you use an Advance Action or\nyour Bonus Action as a Movement\nAction to move, you may move\nthrough Entities in your path,\nmaking an Attack with (2F) to all\nsuch Entities. If you succeed in\nknocking down/away/destroying\nthose Entities, your movement\ncontinues unimpeded, otherwise\nmovement counts as normal. Targets\nwho Dodge will not effect your\nmovement"
+      },
+      "Traits§Challenge": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Strategy 1"
+          }
+        },
+        "text": "When you Search a target, you\nthreaten the target with Ranged\nweapons and any Attacks or abilities\nmade by the target that do not\ninclude you as a target provoke"
+      },
+      "Traits§Combat Lethality": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 3, lvl 3"
+          }
+        },
+        "text": "Add 1 Wound damage to all your\nWeapon Attacks"
+      },
+      "Traits§Combat Medic": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "None"
+          }
+        },
+        "text": "Improve your Proficiency in Identify\nby 1. When you use the Treat Action\nyou may Treat up to two Conditions,\nor heal 1 Wound. You may also\nTreat Poison and Bleeding. Gain +1\nmax Will"
+      },
+      "Traits§Debilitation": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 2, Tactics 1"
+          }
+        },
+        "text": "For every Attack resolved against\nyour opponents in Melee, you may\nchoose to have an additional effect.\nIf you successfully deal 1 Wound to a\ntarget, you may have the target gain\nBleeding 1. If you successfully deal\na Force Effect to the target you may\nhave the target loose 1 Focus. Doing\neither reduces the targets Movement\nby 2 until the end of their next turn."
+      },
+      "Traits§Distracting Pain": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Tactics 1"
+          }
+        },
+        "text": "If a target is suffering a Damage\nOver Time (DOT) effect from you,\nit immediately looses 1 Focus and\nrestores 1 less at the beginning of its\nturn. In addition, it looses 1 Will at\nthe beginning of its turn. This effect\ndoes not stack with itself."
+      },
+      "Traits§Duelist": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Tactics 1"
+          }
+        },
+        "text": "Your may choose to forgo\nthe Wound damage on Melee\nAttacks to add +1 Force on\nthose attacks.\n\n• Whenever you make an Attack\nof Opportunity with a duelist\nMelee Weapon you may\nchoose to sacrifice 1 Focus to\nmake an additional Attack of\nOpportunity.\n\n• Once a round, you may parry\n1 Attack with a held weapons\nas a reaction. This negates the\nattack entirely and makes an\nattack of 1F to the attacker if\nthey are in Melee Reach."
+      },
+      "Traits§Evasion": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 1"
+          }
+        },
+        "text": "In addition to resulting in a Glancing\nBlow, Dodging further reduces any\nincoming Wound Damage by 1/2,\nand Force by 2 on Dodged Attacks.\nIf you Reposition immediately after\nyou Dodge an attack, the Reposition\ndoes not cost Focus."
+      },
+      "Traits§Extra Movement": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 4, lvl 4"
+          }
+        },
+        "text": "Take an extra Move Action on\nyour turn"
+      },
+      "Traits§Ferocity": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Defense 1"
+          }
+        },
+        "text": "Gain 1 Focus when you take Wound\ndamage for the first time every turn.\nGain +2 max Will"
+      },
+      "Traits§Grappler": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, Defense 1"
+          }
+        },
+        "text": "• Strong Bodied: Improve your\nPoise by 1\n\n• Just out of reach: when\ngrappling an opponent\nwith advantage, you gain\n+1 Deflection against that\nopponent.\n\n• Sudden Grab: You may\nsubstitute a grapple attempt\nas any attack with a grapple\nweapon by paying 1 extra\nFocus."
+      },
+      "Traits§Guarded Stance": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "None"
+          }
+        },
+        "text": "Gain +1 Deflection when behind\ncover, when taking the Duck and\nCover Reaction, or when you are\nBlocking an Attack. This bonus does\nnot stack with itself. Gain +1 max\nWill"
+      },
+      "Traits§Hardened": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Defense 2, lvl 3"
+          }
+        },
+        "text": "Add 1 Hardness to the Protection\nof any Armor and/or Shield you are\nusing. Gain +1 Wound."
+      },
+      "Traits§Heroic Resolve": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "None"
+          }
+        },
+        "text": "Once per turn you may become\nResolute or Clear as a Reaction.\nClear used in this way reduces a\nCondition by 2 instead of 1. Gain\n+1 max Will"
+      },
+      "Traits§Improved Focus": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 1, lvl 2"
+          }
+        },
+        "text": "Gain 1 max Focus and Will"
+      },
+      "Traits§Improved Stalwart": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Defense 3, Stalwart"
+          }
+        },
+        "text": "When contracting a Condition, you\nreduce the value of all incoming\nConditions by 1 (other than Fatigue).\nIn addition, upon resisting or curing\na condition, you cannot be subject to\nthe same condition until the start of\nyour next turn."
+      },
+      "Traits§Improved Unarmed Strike": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "removed": {
+          "text": ""
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1"
+          }
+        },
+        "text": "Unarmed Strike becomes a weapon with (1W, 1P, 1F). Whenever you take a Standard Action, you can make an extra Unarmed Strike immediately before or after the Action. Gain +1 max Will."
+      },
+      "Traits§Kill Zone": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 2, Defense 2, Tactics 2"
+          }
+        },
+        "text": "Enemies that are in your Threatened\nArea Provoke AOOs from you right\nbefore your Refresh step (At the very\nstart of your turn before you regain\nFocus)."
+      },
+      "Traits§Leave No Opening": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 2"
+          }
+        },
+        "text": "Regain 1 Focus at the end of your\nturn"
+      },
+      "Traits§Lookout's Readiness": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Tactics 1"
+          }
+        },
+        "text": "Gain an Awareness Specialization,\ngain an immediate Move Action the\nmoment combat starts, Draw and\nswitch weapons without provoking\nand as a Swift Action. Gain +1 max Will"
+      },
+      "Traits§Marksmanship": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1"
+          }
+        },
+        "text": "• Long Shot: Double the effective Range of Ranged Weapons and Attacks, but this feature it does not extend Ranged Threatened Areas\n\n• Point Blank Shot: When firing with a Ranged Weapon at target within 6 tiles, increase Penetration and Force by 1 on the Attack\n\n• Steady Aim: After taking the Prepare Action, The next Attack (Including Abilities) you make before the end of your next turn is considered an Aimed Strike."
+      },
+      "Traits§Mental Guard": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "None"
+          }
+        },
+        "text": "You may use a Reaction once per\nturn to gain +1 Will, increasing your\nmax Will by 1 until the start of your\nturn in the process. Additionally Gain\n+1 max Will"
+      },
+      "Traits§Off the Rails": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 3"
+          }
+        },
+        "text": "You may take any of your actions in\na turn at any point during movement"
+      },
+      "Traits§Opportunist": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, Defense 1, Agility 1, Tactics 1"
+          }
+        },
+        "text": "• You may make an Aimed Strike\nas an Attack of Opportunity\nfor 1 extra Focus\n\n• If an opponent would Provoke,\nbut you do not currently\nthreaten the opponent, you\nmay immediately use your\nReposition to move into\nreach and make an Attack of\nOpportunity if they are now\nbeing threatened by you. Using\nyour Reposition in this way or\nimmediately after you make an\nattack of opportunity costs 1\nless Focus. When using this\nReposition you do not block\nthe opponent’s movement until\nthe end of their action."
+      },
+      "Traits§Power Attack": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "None"
+          }
+        },
+        "text": "Add +1 Penetration to all Attacks.\nWhen using an Aimed Strike, add\nanother +1 Penetration and +1\nForce to the Attack. Additionally,\nyou may use an Aimed Strike as the\nAttack at the end of the Advance\nAction."
+      },
+      "Traits§Quick Assess": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Strategy 1"
+          }
+        },
+        "text": "Gain a Calculate Specialization, you\nmay also use a Swift Action to make\nprogress on Calculate timed Tasks,\nand this also counts as using the\nSearch Action on the target"
+      },
+      "Traits§Raw Ability": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Level 2"
+          }
+        },
+        "text": "Gain a Stat Increase to Offense,\nDefense, or Agility"
+      },
+      "Traits§Refocus": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "None"
+          }
+        },
+        "text": "You may use the Treat Action on\nyourself as part of taking the Prepare\nAction or Recover Action. You\nare also always able to take the\nPrepare Action and Recover Action,\nregardless of conditions limiting your\nActions."
+      },
+      "Traits§Shield Training": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "text": "Reduce the Endurance Specialization\nrequirement for all Shields by 1. You\nmay now use the Raise Shield Action\nas part of any Move Action"
+      },
+      "Traits§Sneak Attack": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Tactics 2"
+          }
+        },
+        "text": "Add 1 Wound to attacks and effects\nagainst unaware targets or when\nflanking."
+      },
+      "Traits§Spear and Shield": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "removed": {
+          "text": ""
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, Defense 1"
+          }
+        },
+        "text": "You may wield spear and polearm\ntype (Spear, Halberd, Glaive)\nWeapons alongside a Shield"
+      },
+      "Traits§Stalwart": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Defense 1"
+          }
+        },
+        "text": "Gain +1 Wound. If you begin your\nround under a condition (other\nthan Fatigue), you may reduce the\nvalue of a single Condition by 1\nright before the Refresh Step. If\nthis would reduce it to 0, then the\ncondition is cured. This may be used\nin addition to using Clear"
+      },
+      "Traits§Studied Target": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Strategy 2"
+          }
+        },
+        "text": "If you have been monitoring a Target with the Search Action\nsince your last turn Add 1 Wound\ndamage to Each Attack and +1\nto Any status condition imparted\nagainst that target."
+      },
+      "Traits§Targeting": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, Agility 1"
+          }
+        },
+        "text": "When making an Aimed Strike, you\nmay take a -1 Aim penalty to target\na specific part of a target. If you deal\nat least one Wound, then you may\ninduce additional effects after the\nAttack is resolved. These effects can\nbe cured with the Treat Action or\nClear Action.\n\n• Leg: Reduces opponent speed\nby 2 and increases the Focus\ncost of dodging by 1\n\n• Arm: reduces the force\nthreshold for disarming by 2\nand reduces opponent Aim by\n1\n\n• Head: Causes opponent to\nimmediately lose 1 Focus and 1\nWill."
+      },
+      "Traits§Twin Weapon Fighting": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, Agility 1"
+          }
+        },
+        "text": "Every time you would be able to\nmake a Weapon Attack, you may\nmake the Attack with up to 2 of\nyour currently wielded Weapons."
+      },
+      "Traits§Will to Survive": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Defense 2, Stalwart"
+          }
+        },
+        "text": "The first instance of Wound damage\nyou take in a round is halved. When\nyou use Duck and Cover Reaction to\nreact, the previous instance of wound\ndamage you’ve taken this turn is\nalso halved, and you can do this in\nresponse to damage that would make\nyou fall unconscious. Gain +1 max\nWill"
+      },
+      "Type§Martial": {
+        "text": "Martials are trained and focus on improving\ntheir own core abilities. At Level 1 Martials\ngain an additional stat increase. They also get\none additional stat increase every even level\nto any stat that is half of their level or lower\n(resolved after their normal increases). trained and focus on improving their own core abilities. At Level 1 Martials\ngain an additional stat increase. They also get one additional stat increase every even level\nto any stat that is half of their level or lower\n(resolved after their normal increases)."
+      },
+      "Weapon§Bow": {
+        "removed": {
+          "keywords": {
+            "Keywords": [
+              "Grapple",
+              "Quickdraw"
+            ]
+          }
+        },
+        "stats": {
+          "Force": {
+            "value": -1
+          },
+          "Penetration": {
+            "value": 1
+          },
+          "Range": {
+            "value": "20"
+          },
+          "Requirements": {
+            "value": "Technique 2, Dexterity 2"
+          },
+          "Wounds": {
+            "value": 1
+          }
+        }
+      },
+      "Weapon§Dagger": {
+        "stats": {
+          "Force": {
+            "value": -1
+          },
+          "Penetration": {
+            "value": 1
+          },
+          "Requirements": {
+            "value": ""
+          },
+          "Wounds": {
+            "value": 1
+          }
+        }
+      },
+      "Weapon§Improved Unarmed Strike": {
+        "keywords": {
+          "Grapple": []
+        },
+        "removed": {
+          "keywords": {
+            "Keywords": [
+              "Quickdraw"
+            ]
+          }
+        },
+        "stats": {
+          "Force": {
+            "value": -1
+          },
+          "Penetration": {
+            "value": 1
+          },
+          "Wounds": {
+            "value": 1
+          }
+        }
+      }
+    },
+    "gameModes": {},
+    "theme": {}
+  }
+}
