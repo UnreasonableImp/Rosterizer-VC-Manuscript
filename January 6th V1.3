@@ -1,0 +1,3019 @@
+{
+  "name": "V&C",
+  "revision": "0.0.1",
+  "game": "",
+  "genre": "generic",
+  "publisher": "",
+  "url": "",
+  "notes": "",
+  "wip": false,
+  "rulebook": {
+    "assetTaxonomy": {
+      "Armor": {
+        "stats": {
+          "Hardness": {
+            "group": "Protection",
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Integrity": {
+            "group": "Protection",
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Poise": {
+            "group": "Protection",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Requirements": {
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Character": {
+        "allowed": {
+          "classifications": [
+            "Traits",
+            "Slot",
+            "Station",
+            "Item Loadout",
+            "Skill List",
+            "Type"
+          ]
+        },
+        "aspects": {
+          "Group Includes": true,
+          "Rename": true
+        },
+        "removed": {
+          "stats": {
+            "Attributes": {}
+          }
+        },
+        "stats": {
+          "Agility": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Aim": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 5,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Defense": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Deflection": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 6,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Fatigue": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 9,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Focus": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Load": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 8,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Offense": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 2,
+            "visibility": "normal"
+          },
+          "Speed": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Strategy": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 5,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Tactics": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 4,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Utility": {
+            "dynamic": true,
+            "group": "Stats",
+            "statOrder": 6,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Will": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Wounds": {
+            "dynamic": true,
+            "group": "Attributes",
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Item": {
+        "stats": {
+          "XP Value": {
+            "statType": "numeric",
+            "value": 0
+          }
+        }
+      },
+      "Item Loadout": {
+        "allowed": {
+          "classifications": [
+            "Tool",
+            "Armor",
+            "Weapon",
+            "Item"
+          ]
+        },
+        "removed": {
+          "stats": {
+            "Value": {}
+          }
+        },
+        "stats": {
+          "XP Value": {
+            "statType": "numeric",
+            "value": 0
+          }
+        }
+      },
+      "Skill": {
+        "aspects": {
+          "Unique": true
+        },
+        "rules": {
+          "ProfCalc": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Proficiency",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "rules",
+                  "ProfCalc",
+                  "evals",
+                  "3",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "stats",
+                    "Offense",
+                    "value"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "0",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "1",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "2",
+                    "result",
+                    "float"
+                  ]
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Specialization",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "stats": {
+          "Proficiency": {
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Specialization": {
+            "dynamic": true,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Skill List": {
+        "allowed": {
+          "classifications": [
+            "Skill"
+          ]
+        },
+        "stats": {
+          "Awareness P": {
+            "group": "Awareness",
+            "groupOrder": 4,
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Awareness S": {
+            "dynamic": true,
+            "group": "Awareness",
+            "groupOrder": 4,
+            "ranks": {
+              "3": {
+                "number": 2,
+                "order": 0
+              },
+              "4": {
+                "number": 3,
+                "order": 1
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Calculate": {
+            "dynamic": true,
+            "group": "Calculate",
+            "groupOrder": 8,
+            "statOrder": 8,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Dexterity P": {
+            "group": "Dexterity",
+            "groupOrder": 3,
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Dexterity S": {
+            "dynamic": true,
+            "group": "Dexterity",
+            "groupOrder": 3,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Endurance P": {
+            "group": "Endurance",
+            "groupOrder": 2,
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Endurance S": {
+            "dynamic": true,
+            "group": "Endurance",
+            "groupOrder": 2,
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal"
+          },
+          "Enviornment": {
+            "dynamic": true,
+            "group": "Lore, Enviorment",
+            "groupOrder": 12,
+            "statOrder": 12,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Identify": {
+            "dynamic": true,
+            "group": "Identify",
+            "groupOrder": 5,
+            "statOrder": 5,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Magic": {
+            "dynamic": true,
+            "group": "Lore, Magic",
+            "groupOrder": 10,
+            "statOrder": 10,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Observe": {
+            "dynamic": true,
+            "group": "Observe",
+            "groupOrder": 7,
+            "statOrder": 7,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Prof": {
+            "statType": "numeric",
+            "value": 0
+          },
+          "Social": {
+            "dynamic": true,
+            "group": "Social",
+            "groupOrder": 9,
+            "statOrder": 9,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Society": {
+            "dynamic": true,
+            "group": "Lore, Society",
+            "groupOrder": 11,
+            "statOrder": 11,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Stealth": {
+            "dynamic": true,
+            "group": "Stealth",
+            "groupOrder": 6,
+            "statOrder": 6,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Technique P": {
+            "dynamic": true,
+            "group": "Technique",
+            "groupOrder": 1,
+            "statOrder": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Technique S": {
+            "dynamic": true,
+            "group": "Technique",
+            "groupOrder": 1,
+            "ranks": {
+              "1": {
+                "number": 1,
+                "order": 0,
+                "tracking": {
+                  "Proficiency": 1,
+                  "TechniqueP": 1
+                },
+                "traits": [
+                  {
+                    "trait": "Skill§Technique"
+                  }
+                ]
+              }
+            },
+            "statOrder": 0,
+            "statType": "rank",
+            "tracked": true,
+            "value": "1",
+            "visibility": "normal"
+          }
+        }
+      },
+      "Slot": {
+        "keywords": {
+          "Keywords": [
+            "Arcane 1",
+            "Arcane 2"
+          ]
+        }
+      },
+      "Station": {
+        "text": ""
+      },
+      "Storage": {
+        "allowed": {
+          "classifications": [
+            "Armor",
+            "Item",
+            "Tool",
+            "Weapon",
+            "Item Loadout"
+          ]
+        }
+      },
+      "Tool": {
+        "stats": {
+          "Requirements": {
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Traits": {
+        "keywords": {
+          "Trait Type": []
+        },
+        "stats": {
+          "Requirements": {
+            "dynamic": false,
+            "statType": "term",
+            "tracked": false,
+            "value": null,
+            "visibility": "normal"
+          }
+        }
+      },
+      "Type": {},
+      "Weapon": {
+        "aspects": {
+          "Describe": true,
+          "Group Includes": false,
+          "Rename": true
+        },
+        "keywords": {
+          "Keywords": []
+        },
+        "stats": {
+          "Force": {
+            "dynamic": true,
+            "group": "Effect",
+            "statOrder": 3,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Penetration": {
+            "dynamic": true,
+            "group": "Effect",
+            "statOrder": 2,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          },
+          "Range": {
+            "dynamic": true,
+            "statType": "term",
+            "text": "M",
+            "value": "M",
+            "visibility": "normal"
+          },
+          "Requirements": {
+            "statType": "term",
+            "value": null,
+            "visibility": "normal"
+          },
+          "Wounds": {
+            "dynamic": true,
+            "group": "Effect",
+            "statOrder": 1,
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal"
+          }
+        }
+      }
+    },
+    "assetCatalog": {
+      "Armor§Gambeson": {
+        "stats": {
+          "Hardness": {
+            "value": 1
+          },
+          "Integrity": {
+            "value": 1
+          },
+          "Poise": {
+            "value": 1
+          },
+          "Requirements": {
+            "value": "Endurance 1"
+          }
+        }
+      },
+      "Armor§Round Shield": {
+        "stats": {
+          "Hardness": {
+            "value": 3
+          },
+          "Integrity": {
+            "value": 2
+          },
+          "Poise": {
+            "value": 2
+          },
+          "Requirements": {
+            "value": "Endurance 3"
+          }
+        }
+      },
+      "Character§Dynamic": {
+        "allowed": {
+          "classifications": []
+        },
+        "assets": {
+          "included": [],
+          "traits": []
+        }
+      },
+      "Item Loadout§Loadout 1": {},
+      "Item§Enchanted Ring": {},
+      "Roster§Units": {
+        "allowed": {
+          "classifications": [
+            "Character"
+          ]
+        },
+        "assets": {
+          "included": [
+            "Character§Dynamic"
+          ]
+        },
+        "removed": {
+          "allowed": {
+            "classifications": [
+              "Weapon"
+            ]
+          }
+        }
+      },
+      "Skill List§Skills": {
+        "aspects": {
+          "Rename": true
+        }
+      },
+      "Skill§Agility": {
+        "rules": {
+          "ProfCalc": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Proficiency",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "rules",
+                  "ProfCalc",
+                  "evals",
+                  "3",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "stats",
+                    "Agility",
+                    "value"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "0",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "1",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "2",
+                    "result",
+                    "float"
+                  ]
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Specialization",
+                    "value"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Skill§Awareness": {
+        "rules": {
+          "ProfCalc": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Proficiency",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "rules",
+                  "ProfCalc",
+                  "evals",
+                  "3",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "stats",
+                    "Tactics",
+                    "value"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "0",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "1",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "2",
+                    "result",
+                    "float"
+                  ]
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Specialization",
+                    "value"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Skill§Calculate": {
+        "rules": {
+          "ProfCalc": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Proficiency",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "rules",
+                  "ProfCalc",
+                  "evals",
+                  "3",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "stats",
+                    "Strategy",
+                    "value"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "0",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "1",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "2",
+                    "result",
+                    "float"
+                  ]
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Specialization",
+                    "value"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Skill§Endurance": {
+        "rules": {
+          "ProfCalc": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Proficiency",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "rules",
+                  "ProfCalc",
+                  "evals",
+                  "3",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "stats",
+                    "Defense",
+                    "value"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "0",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "1",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "2",
+                    "result",
+                    "float"
+                  ]
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Specialization",
+                    "value"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Skill§Identify": {
+        "rules": {
+          "ProfCalc": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Proficiency",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "rules",
+                  "ProfCalc",
+                  "evals",
+                  "3",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "stats",
+                    "Tactics",
+                    "value"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "0",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "1",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "2",
+                    "result",
+                    "float"
+                  ]
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Specialization",
+                    "value"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Skill§L. Enviorment": {
+        "rules": {
+          "ProfCalc": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Proficiency",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "rules",
+                  "ProfCalc",
+                  "evals",
+                  "3",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "stats",
+                    "Utility",
+                    "value"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "0",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "1",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "2",
+                    "result",
+                    "float"
+                  ]
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Specialization",
+                    "value"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Skill§L. Magic": {
+        "rules": {
+          "ProfCalc": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Proficiency",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "rules",
+                  "ProfCalc",
+                  "evals",
+                  "3",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "stats",
+                    "Utility",
+                    "value"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "0",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "1",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "2",
+                    "result",
+                    "float"
+                  ]
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Specialization",
+                    "value"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Skill§L. Society": {
+        "rules": {
+          "ProfCalc": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Proficiency",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "rules",
+                  "ProfCalc",
+                  "evals",
+                  "3",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "stats",
+                    "Utility",
+                    "value"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "0",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "1",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "2",
+                    "result",
+                    "float"
+                  ]
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Specialization",
+                    "value"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Skill§Observe": {
+        "rules": {
+          "ProfCalc": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Proficiency",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "rules",
+                  "ProfCalc",
+                  "evals",
+                  "3",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "stats",
+                    "Strategy",
+                    "value"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "0",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "1",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "2",
+                    "result",
+                    "float"
+                  ]
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Specialization",
+                    "value"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Skill§Social": {
+        "rules": {
+          "ProfCalc": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Proficiency",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "rules",
+                  "ProfCalc",
+                  "evals",
+                  "3",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "stats",
+                    "Strategy",
+                    "value"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "0",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "1",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "2",
+                    "result",
+                    "float"
+                  ]
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Specialization",
+                    "value"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Skill§Stealth": {
+        "rules": {
+          "ProfCalc": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Proficiency",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "rules",
+                  "ProfCalc",
+                  "evals",
+                  "3",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "{parent}",
+                    "stats",
+                    "Tactics",
+                    "value"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "0",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "1",
+                    "result",
+                    "float"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T+O",
+                  "value": [
+                    "{self}",
+                    "rules",
+                    "ProfCalc",
+                    "evals",
+                    "2",
+                    "result",
+                    "float"
+                  ]
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Specialization",
+                    "value"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "Skill§Technique": {
+        "stats": {
+          "Specialization": {}
+        }
+      },
+      "Slot§Arcane Bolts": {
+        "removed": {
+          "keywords": {
+            "Keywords": [
+              "Arcane 2"
+            ]
+          }
+        },
+        "text": "Action: Weapon Attack\nEffect: 2x (1W, 0P, -2F), P, Range 8 tiles\n\nGain the ability to fire magical projectiles at range"
+      },
+      "Slot§Fireball": {
+        "removed": {
+          "keywords": {
+            "Keywords": [
+              "Arcane 1"
+            ]
+          }
+        },
+        "text": "Action: Standard (AOE)\nTarget: 3 tile radius AOE, Range 20\nEffect: Attack against all Entities in AOE (3W, E)\n\nLaunch a large fireball in the target direction, scorching\neverything inside the radius."
+      },
+      "Station§Craftsman": {
+        "text": "Story\n\nCraftsman. Alaria is filled with myriad wonders and people to explore and study them.\nWhether for mundane purposes or adventure, Craftsmen are the ones that produce the\ntools and equipment needed to perform both everyday and heroic action.\n\nInfluence\n\nAdept Worker. A Craftsman has the resources, the connections, and the knowledge to be\nhighly productive in their chosen trade. Craftsmen gain +1 XP to Items for every Downtime\nUnit spent crafting.\n\nAcquired Skills\n\nAppraising Eye. Craftsmen have worked with all sorts of materials and made study of\nthem. Craftsmen gain 1 Specialization to Identify and immediately know the Hardness of\nany material or Protection they can clearly see.\n\nWealth\n\nImprovised Creation. A Craftsman can, during an adventure, craft a single Item worth up\nto 1/2 their level in XP. A Craftsman requires an uninterrupted period of at least 1 hour to\ncraft it. This Item cannot be added to the Company Inventory, and is lost at the end of the\nadventure."
+      },
+      "Station§Merchant": {
+        "text": "Story\n\nMerchant. As Alaria is isolated from much of the world by unforgiving wilderness and\nsea, most of its citizens know next to nothing about other civilizations. Merchants are a\nprivileged few that are exposed to the main trade route through......... and have wealth to\ntake advantage of the opportunities it presents. Merchants are the most frequent travelers\nwithin the Alarian valley, and usually become cosmopolitans.\n\nInfluence\n\nEverything’s for sale. While the public often looks forward to merchant arrivals and the\ngoods that they bring with them, most factions believe that many merchants are just as\nlikely to sell goods to their opponents as their own faction. Merchants also often have to\npay bribes to officials and guards or risk their goods being confiscated. Reputation is a\ncommodity like any other. When spending Downtime Units Crafting or Trading, a Merchant\nmay exchange 1 Reputation from any faction into 1XP in items, or vice versa, for every\nDowntime Unit used.\n\nAcquired Skills\n\nHaggler. Merchants are used to making deals with lords, wanderers and anyone in between.\nMerchants gain 1 Specialization in Social.\n\nWealth\n\n\"I have a lot of stuff\". Merchants have wealth a step above the rest. Some also have\nexperience smuggling valuable magical items and weapons. Merchants can bring 1XP worth\nof items for each Charecter Level they have. These items do not count toward the Squad\nXP value."
+      },
+      "Station§Mountaineer": {
+        "text": "Story\n\nMountaineer. A small group of personnel regularly venture into the hostile Northern\nAlarian wilderness. These wilderness explorers are called Mountaineers. They regularly\nconstruct paths, prospect with miners, and occasionally deal with troublesome creatures\naway from Civilization. Mountaineers have one of the most dangerous jobs in Alaria, but\nenjoy a unique sense of freedom, meaning, and adventure.\n\nInfluence\n\nScout’s Honor. Mountaineers are generally seen as public servants to the commonfolk.\nWhile their specialized skill set often goes unrecognized. Mountaineers have developed\na strong mutual understanding with each other and travellers who they assist. When\nMountaineers guide, protect or rescue members of a Faction, and would gain Reputation\nat the completion of the Module, they can choose to increase the amount of Reputation\ngained by 1 with that Faction. In addition, they can always obtain a terrain map of any\nlocation that has been explored before by Alarians. This allows them to see battle maps of\npossible upcoming encounters.\n\nAcquired Skills\n\nTrekker. Mountaineers are used to traveling long distance with packs full of supplies, and\nhave also learned to recognize many dangers. Gain 1 Load and 1 Identify Specialization.\n\nWealth\n\nNone. While Mountaineers are often commissioned as miners and guides, these\ncommissions often pay low. Most Mountaineers are unable to build up any sizable wealth.\nThe ones seeking substantial wealth may be drawn to banditry."
+      },
+      "Station§Performer": {
+        "text": "Story\n\nPerformer. There are a few who performs feats in front of an audience to make their living\nin Alaria. These Performers might be Musicians, magicians, comedians, dancers, stuntmen,\nor anything in between.\n\nInfluence\n\nActor. A performer may criticize or rebuke a creature without suffering any reputation loss.\nIn addition, anytime they engage in the Service Downtime Activity, for every 2 Downtime\nUnits they may gain 1 Reputation with a faction that already has at least 1 Reputation.\n\nAcquired Skills\n\nPeople Person. A performer is able to quickly gather information on the cultural dynamics\nof any place they spend time. Gain +1 proficiency to Society.\n\nWealth\n\nBenefactors. Performers put their fame before their business opportunities. Though 1\ndoes occasionally follow the other. Performers can bring 1XP worth of items for each 2\nreputation their Company has with their highest Reputation Faction. These items do not\ncount toward the Squad XP value"
+      },
+      "Station§Scholar": {
+        "text": "Story\n\nScholar. The academic pursuits of the Alarian University and religious orders are held in\nhigh regard by most Alarians. From the study of magical artifacts from The Holy City to\nthe incantations that help improve the lives of citizens, scholars are backed by the church\nand fulfill an important role in Alarain society. However, few Alarians show the aptitude to\nbecome scholars and those that do often find themselves pressured by the demands of\nthe church, government, and the unrealistic expectations of the populous. Volx are usually\nbarred from attaining scholarly positions due to concerns with Chaos Magic and general\ndistrust.\n\nInfluence\n\nChurch’s Representative. In Alaria, most magical pursuits are under the domain of the\nChurch and University. Scholars that act as agents of the Church are protected. Each\nadventure, a Scholar may receive an assignment from the Church or University. If the\nScholar accomplishes their assignment during the adventure, at the end of the adventure\nthey may choose a single event and ignore all Reputation loss that resulted from it.\n\nAcquired Skills\n\nLore. Scholars gain a Specialization to a Lore Skill of their choice\n\nWealth\n\nCommission. Scholars are allowed to commission magical items for fieldwork from\nChurches and Schools. They may commission a 1XP Item from the default Item List and\nchange this item out for a different one every Module. This does not count toward the\nSquad XP value. If this item is lost, Reputation with the Church decreases by one."
+      },
+      "Station§Wanderer": {
+        "text": "Story\n\nWanderer. Many individuals in Alaria at some point find themselves looking for a new path\nforward. Perhaps they were a scholar that was exiled from the University for exploring\nforbidden magic, a mercenary looking for a new client, or just a simple tourist. Through\nwhatever circumstance, wanderers find it hard to stay in one place.\n\nInfluence\n\nUnrecognized. Wanderers move from place to place, and often remain unrecognized\nby the public, law enforcement, or other factions. Wanderers often adopt new names\nfor when they would rather not have their past catch up to them. In addition, during an\nadventure, a Wanderer may choose to not loose or gain Reputation with a single Faction\nselected during the adventure.\n\nAcquired Skills\n\nResourceful. Wanderers often prove to be adaptable and resourceful in new environments\nand gain 1 specialization to any skill.\n\nWealth\n\nFinders Keepers. Wanderers may keep a single item that they come across in their travels\nthat they are able to fit on their person and is worth 3XP or less. They must end the\nadventure in possession of the item. This item does not count towards the Squad XP value."
+      },
+      "Storage§Party Storage": {},
+      "Tool§Powered Glider": {},
+      "Traits§Acrobatics": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 1"
+          }
+        },
+        "text": "Each turn, you may designate a\nnumber of linked tiles up to half\nof your Speed. Movement in those\nsquares do not provoke, and do not\ncount as Difficult Terrain."
+      },
+      "Traits§Alchemy 1": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 1, lvl 1"
+          }
+        },
+        "text": "Gain access to the Alchemy 1 List,\ngain two Alchemy Slots"
+      },
+      "Traits§Alchemy 2": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 3, Alchemy 1, lvl 3"
+          }
+        },
+        "text": "Gain access to the Alchemy 2 List,\ngain two Alchemy Slots"
+      },
+      "Traits§An Eye for an Eye": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, Defense 1"
+          }
+        },
+        "text": "You may choose to take an incoming\nAttack in melee from a combatant\nyou currently threaten. Doing so\nallows you to make an AOO on the\nattacking creature as a Reaction and\nthe Attacks resolve simultaneously.\nGain +1 max Will."
+      },
+      "Traits§Arcane 1": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 1, lvl 2, Human"
+          }
+        },
+        "text": "Gain access to the Arcane 1 List,\ngain an Arcane Slot."
+      },
+      "Traits§Arcane 2": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 3, Arcane 1, lvl 4, Human"
+          }
+        },
+        "text": "Gain access to the Arcane 2 List,\ngain an Arcane Slot"
+      },
+      "Traits§Arcane Preparation": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Arcane 1, Human"
+          }
+        },
+        "text": "You may prepare an Arcane slot as a\nStandard Action"
+      },
+      "Traits§Arcane Summoning": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Arcane Summoning"
+          }
+        },
+        "text": "You can use Arcane summons (See References)"
+      },
+      "Traits§Assassin's Technique": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Tactics 1"
+          }
+        },
+        "text": "• Improve your Proficiency in\nStealth by 1\n• Underhanded: You can feint\nwith a Weapon as a Move\nAction. You are considered\nKnown rather than Observed\nwith the first Attack you make\nthis turn with the feinted\nweapon. You may feint as a\nSwift Action if you are using a\nWeapon with Quick-draw.\n• Silent Strike: When you use an\nAimed Strike, you may Attack\nwithout automatically being\nrevealed."
+      },
+      "Traits§Barrage": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 3, lvl 3"
+          }
+        },
+        "text": "You may make any Standard Action\nyou can perform as a Bonus Action\ncosting 2 Focus"
+      },
+      "Traits§Blessing": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 1"
+          }
+        },
+        "text": "As a Swift Action, gain +1\nPenetration on Attacks, or grant\nyour Protection +1 Hardness and\nIntegrity. Alternatively you may gain\n+1 Will, increasing your max Will\nby 1 for a single turn in the process.\nYou may become Resolute as part\nof this Action. This cannot be used\nto select the same option more than\nonce a turn."
+      },
+      "Traits§Bullrush": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Defense 2, Agility 1, lvl 2"
+          }
+        },
+        "text": "When you use an Advance Action or\nyour Bonus Action as a Movement\nAction to move, you may move\nthrough Entities in your path,\nmaking an Attack with (2F) to all\nsuch Entities. If you succeed in\nknocking down/away/destroying\nthose Entities, your movement\ncontinues unimpeded, otherwise\nmovement counts as normal. Targets\nwho Dodge will not effect your\nmovement"
+      },
+      "Traits§Challenge": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Strategy 1"
+          }
+        },
+        "text": "When you Search a target, you\nthreaten the target with Ranged\nweapons and any Attacks or abilities\nmade by the target that do not\ninclude you as a target provoke"
+      },
+      "Traits§Channel Energy (N)": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 1"
+          }
+        },
+        "text": "You may use the Treat Action as an\nAttack to harm targets at (2W, E).\nThis Attack cannot be Dodged. As a\nStandard Action with the additional\ncost of 2 Focus, you may Treat any\nnumber of Entities within 6 tiles of\nyou. This is considered an Energy\neffect, and may not be used at the\nsame time as Channel Energy (P)."
+      },
+      "Traits§Channel Energy (P)": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 1"
+          }
+        },
+        "text": "You may use the Treat Action\nto remove Staggered, Dazed and\nFeared, or heal targets 1 Wound\n(stacks with combat medic). As a\nstandard action with the additional\ncost of 2 focus, you may Treat any\nnumber of Entities within 6 tiles of\nyou. This is considered an Energy\neffect."
+      },
+      "Traits§Channel Heal and Harm": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Channel Energy (P), Channel Energy (N)"
+          }
+        },
+        "text": "You may activate Channel Energy\n(N) and Channel Energy (P) at the\nsame time, choosing how to effect\neach Target individually."
+      },
+      "Traits§Chaos Attunement": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Chaos Tap, Volx"
+          }
+        },
+        "text": "Whenever you use Chaos Tap,\ninstead of its usual benefits, you may\npower a single Item that is normally\npowered through Arcane or Divine\nSlots that you are touching. You\nmay power any number of Items,\nbut must use Chaos Tap for each\nItem powered. Any Items powered\nthis way only remain active for 1\nminute. If a surge occurs, you may\npower that Item for the next 24\nhours instead."
+      },
+      "Traits§Chaos Tap": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Volx"
+          }
+        },
+        "text": "See Chaos Tap reference"
+      },
+      "Traits§Combat Lethality": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 3, lvl 3"
+          }
+        },
+        "text": "Add 1 Wound damage to all your\nWeapon Attacks"
+      },
+      "Traits§Combat Medic": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "None"
+          }
+        },
+        "text": "Improve your Proficiency in Identify\nby 1. When you use the Treat Action\nyou may Treat up to two Conditions,\nor heal 1 Wound. You may also\nTreat Poison and Bleeding. Gain +1\nmax Will"
+      },
+      "Traits§Coordination 1": {
+        "keywords": {
+          "Trait Type": [
+            "Strategy"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Strategy 1"
+          }
+        },
+        "text": "Gain access to the Coordination 1\nList, gain two Strategic Slots"
+      },
+      "Traits§Coordination 2": {
+        "keywords": {
+          "Trait Type": [
+            "Strategy"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Strategy 3, Coordination 1, lvl 2"
+          }
+        },
+        "text": "Gain access to the Coordination 2\nList, gain a Strategic Slot."
+      },
+      "Traits§Debilitation": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 2, Tactics 1"
+          }
+        },
+        "text": "For every Attack resolved against\nyour opponents in Melee, you may\nchoose to have an additional effect.\nIf you successfully deal 1 Wound to a\ntarget, you may have the target gain\nBleeding 1. If you successfully deal\na Force Effect to the target you may\nhave the target loose 1 Focus. Doing\neither reduces the targets Movement\nby 2 until the end of their next turn."
+      },
+      "Traits§Distracting Pain": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Tactics 1"
+          }
+        },
+        "text": "If a target is suffering a Damage\nOver Time (DOT) effect from you,\nit immediately looses 1 Focus and\nrestores 1 less at the beginning of its\nturn. In addition, it looses 1 Will at\nthe beginning of its turn. This effect\ndoes not stack with itself."
+      },
+      "Traits§Divine 1": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 1, lvl 2, Human"
+          }
+        },
+        "text": "Gain access to the Divine 1 List, gain\nan Divine Slot"
+      },
+      "Traits§Divine 2": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 3, Divine 1, lvl 4, Human"
+          }
+        },
+        "text": "Gain access to the Divine 2 List, gain\nan Divine Slot"
+      },
+      "Traits§Divine Strike": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 2, Utility 1, Blessing"
+          }
+        },
+        "text": "You may take a Standard Action\nto bless a Weapon, but only while\ncurrently in Combat. You may also\nactivate Blessing with this action.\nWhen the Weapon is blessed, the\nWeapon has +1P. As a Standard\nAction, you may expend the blessing\nto unleash a Divine Strike. This is\nconsidered an Aimed Strike and has\na special Range. The Divine Strike\nhas an AOE of a 2 Tile radius at\na range 6 or a 4 tile long cone and\ndeals +1 Wound. Only a single\nWeapon you are currently wielding\ncan be blessed and if you lose hold\nof the weapon, or are no longer in\ncombat, it loses the blessing."
+      },
+      "Traits§Duelist": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Tactics 1"
+          }
+        },
+        "text": "Your may choose to forgo\nthe Wound damage on Melee\nAttacks to add +1 Force on\nthose attacks.\n\n• Whenever you make an Attack\nof Opportunity with a duelist\nMelee Weapon you may\nchoose to sacrifice 1 Focus to\nmake an additional Attack of\nOpportunity.\n\n• Once a round, you may parry\n1 Attack with a held weapons\nas a reaction. This negates the\nattack entirely and makes an\nattack of 1F to the attacker if\nthey are in Melee Reach."
+      },
+      "Traits§Empower Rune": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Arcane 1, Human"
+          }
+        },
+        "text": "At the cost of 1 Focus, empower a single Attack or ability with Arcane power (not limited to Arcane) for it to deal +1 Wounds and +1 Force, or increase any Conditions on the Attack or ability by 1"
+      },
+      "Traits§Evasion": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 1"
+          }
+        },
+        "text": "In addition to resulting in a Glancing\nBlow, Dodging further reduces any\nincoming Wound Damage by 1/2,\nand Force by 2 on Dodged Attacks.\nIf you Reposition immediately after\nyou Dodge an attack, the Reposition\ndoes not cost Focus."
+      },
+      "Traits§Extra Alchemy Slots 1": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 2, Alchemy 1"
+          }
+        },
+        "text": "Gain 4 Alchemy Slots"
+      },
+      "Traits§Extra Arcane Slots 1": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 2, Arcane 1"
+          }
+        },
+        "text": "Gain 2 Arcane Slots"
+      },
+      "Traits§Extra Arcane Slots 2": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 4, Arcane 2"
+          }
+        },
+        "text": "Gain 2 Arcane Slots"
+      },
+      "Traits§Extra Arcane Summons": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Arcane Summoning"
+          }
+        },
+        "text": "You may have two instances of\nArcane Summoning active at one\ntime"
+      },
+      "Traits§Extra Divine Slots 1": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 2, Divine 1"
+          }
+        },
+        "text": "Gain 2 Divine Slots"
+      },
+      "Traits§Extra Divine Slots 2": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 4, Divine 2"
+          }
+        },
+        "text": "Gain 2 Divine Slots"
+      },
+      "Traits§Extra Movement": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 4, lvl 4"
+          }
+        },
+        "text": "Take an extra Move Action on\nyour turn"
+      },
+      "Traits§Extra Strategic Slots": {
+        "keywords": {
+          "Trait Type": [
+            "Strategy"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Strategy 2"
+          }
+        },
+        "text": "Gain 2 Strategic Slots"
+      },
+      "Traits§Ferocity": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Defense 1"
+          }
+        },
+        "text": "Gain 1 Focus when you take Wound\ndamage for the first time every turn.\nGain +2 max Will"
+      },
+      "Traits§Grappler": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, Defense 1"
+          }
+        },
+        "text": "• Strong Bodied: Improve your\nPoise by 1\n\n• Just out of reach: when\ngrappling an opponent\nwith advantage, you gain\n+1 Deflection against that\nopponent.\n\n• Sudden Grab: You may\nsubstitute a grapple attempt\nas any attack with a grapple\nweapon by paying 1 extra\nFocus."
+      },
+      "Traits§Guarded Stance": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "None"
+          }
+        },
+        "text": "Gain +1 Deflection when behind\ncover, when taking the Duck and\nCover Reaction, or when you are\nBlocking an Attack. This bonus does\nnot stack with itself. Gain +1 max\nWill"
+      },
+      "Traits§Hardened": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Defense 2, lvl 3"
+          }
+        },
+        "text": "Add 1 Hardness to the Protection\nof any Armor and/or Shield you are\nusing. Gain +1 Wound."
+      },
+      "Traits§Heroic Resolve": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "None"
+          }
+        },
+        "text": "Once per turn you may become\nResolute or Clear as a Reaction.\nClear used in this way reduces a\nCondition by 2 instead of 1. Gain\n+1 max Will"
+      },
+      "Traits§Improved Aura": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Divine 1"
+          }
+        },
+        "text": "You may have 2 Auras active on your\nCharacter at a time"
+      },
+      "Traits§Improved Focus": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 1, lvl 2"
+          }
+        },
+        "text": "Gain 1 max Focus and Will"
+      },
+      "Traits§Improved Poisons": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Alchemy 1"
+          }
+        },
+        "text": "Increase poison damage, duration,\nand other numerical penalties by 1"
+      },
+      "Traits§Improved Stalwart": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Defense 3, Stalwart"
+          }
+        },
+        "text": "When contracting a Condition, you\nreduce the value of all incoming\nConditions by 1 (other than Fatigue).\nIn addition, upon resisting or curing\na condition, you cannot be subject to\nthe same condition until the start of\nyour next turn."
+      },
+      "Traits§Improved Unarmed Strike": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "removed": {
+          "text": ""
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1"
+          }
+        },
+        "text": "Unarmed Strike becomes a weapon with (1W, 1P, 1F). Whenever you take a Standard Action, you can make an extra Unarmed Strike immediately before or after the Action. Gain +1 max Will."
+      },
+      "Traits§Intimidation 1": {
+        "keywords": {
+          "Trait Type": [
+            "Strategy"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Strategy 1"
+          }
+        },
+        "text": "Gain access to the Intimidation 1\nList, gain a Strategic Slot, and gain\na Social Specialization"
+      },
+      "Traits§Intimidation 2": {
+        "keywords": {
+          "Trait Type": [
+            "Strategy"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Strategy 3, Intimidation 1, lvl 2"
+          }
+        },
+        "text": "Gain access to the Intimidation 2\nList, gain a Strategic Slot"
+      },
+      "Traits§Kill Zone": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 2, Defense 2, Tactics 2"
+          }
+        },
+        "text": "Enemies that are in your Threatened\nArea Provoke AOOs from you right\nbefore your Refresh step (At the very\nstart of your turn before you regain\nFocus)."
+      },
+      "Traits§Leave No Opening": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 2"
+          }
+        },
+        "text": "Regain 1 Focus at the end of your\nturn"
+      },
+      "Traits§Lookout's Readiness": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Tactics 1"
+          }
+        },
+        "text": "Gain an Awareness Specialization,\ngain an immediate Move Action the\nmoment combat starts, Draw and\nswitch weapons without provoking\nand as a Swift Action. Gain +1 max Will"
+      },
+      "Traits§Magical Attunement 1": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Utility 1"
+          }
+        },
+        "text": "Gain 2 slots, these slots can be used\nto power Equipment and Items as if\nthey were Arcane or Divine Slots."
+      },
+      "Traits§Marksmanship": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1"
+          }
+        },
+        "text": "• Long Shot: Double the effective Range of Ranged Weapons and Attacks, but this feature it does not extend Ranged Threatened Areas\n\n• Point Blank Shot: When firing with a Ranged Weapon at target within 6 tiles, increase Penetration and Force by 1 on the Attack\n\n• Steady Aim: After taking the Prepare Action, The next Attack (Including Abilities) you make before the end of your next turn is considered an Aimed Strike."
+      },
+      "Traits§Mental Guard": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "None"
+          }
+        },
+        "text": "You may use a Reaction once per\nturn to gain +1 Will, increasing your\nmax Will by 1 until the start of your\nturn in the process. Additionally Gain\n+1 max Will"
+      },
+      "Traits§Mount 1": {
+        "keywords": {
+          "Trait Type": [
+            "Strategy"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Strategy 1, lvl 2"
+          }
+        },
+        "text": "Gain a Mount, and access to the\nMount 1 list"
+      },
+      "Traits§Mount 2": {
+        "keywords": {
+          "Trait Type": [
+            "Strategy"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Strategy 3, Mount 1, lvl 4"
+          }
+        },
+        "text": "Enhance your Mount, and gain\naccess to the Mount 2 list (Under\nDevelopment)"
+      },
+      "Traits§Off the Rails": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Agility 3"
+          }
+        },
+        "text": "You may take any of your actions in\na turn at any point during movement"
+      },
+      "Traits§Opportunist": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, Defense 1, Agility 1, Tactics 1"
+          }
+        },
+        "text": "• You may make an Aimed Strike\nas an Attack of Opportunity\nfor 1 extra Focus\n\n• If an opponent would Provoke,\nbut you do not currently\nthreaten the opponent, you\nmay immediately use your\nReposition to move into\nreach and make an Attack of\nOpportunity if they are now\nbeing threatened by you. Using\nyour Reposition in this way or\nimmediately after you make an\nattack of opportunity costs 1\nless Focus. When using this\nReposition you do not block\nthe opponent’s movement until\nthe end of their action."
+      },
+      "Traits§Power Attack": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "None"
+          }
+        },
+        "text": "Add +1 Penetration to all Attacks.\nWhen using an Aimed Strike, add\nanother +1 Penetration and +1\nForce to the Attack. Additionally,\nyou may use an Aimed Strike as the\nAttack at the end of the Advance\nAction."
+      },
+      "Traits§Quick Assess": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Strategy 1"
+          }
+        },
+        "text": "Gain a Calculate Specialization, you\nmay also use a Swift Action to make\nprogress on Calculate timed Tasks,\nand this also counts as using the\nSearch Action on the target"
+      },
+      "Traits§Raw Ability": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Level 2"
+          }
+        },
+        "text": "Gain a Stat Increase to Offense,\nDefense, or Agility"
+      },
+      "Traits§Refocus": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "None"
+          }
+        },
+        "text": "You may use the Treat Action on\nyourself as part of taking the Prepare\nAction or Recover Action. You\nare also always able to take the\nPrepare Action and Recover Action,\nregardless of conditions limiting your\nActions."
+      },
+      "Traits§Shield Training": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "text": "Reduce the Endurance Specialization\nrequirement for all Shields by 1. You\nmay now use the Raise Shield Action\nas part of any Move Action"
+      },
+      "Traits§Sneak Attack": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Tactics 2"
+          }
+        },
+        "text": "Add 1 Wound to attacks and effects\nagainst unaware targets or when\nflanking."
+      },
+      "Traits§Spear and Shield": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "removed": {
+          "text": ""
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, Defense 1"
+          }
+        },
+        "text": "You may wield spear and polearm\ntype (Spear, Halberd, Glaive)\nWeapons alongside a Shield"
+      },
+      "Traits§Spellblade": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, (Arcane 1, Divine 1, or Alchemy 1)"
+          }
+        },
+        "text": "You may cast spells without a hand\nfree so long as you are wielding a\nWeapon you are Proficient with.\nWhenever you cast a spell that is\na Standard Action, you can make an\nAttack with any wielded Weapon."
+      },
+      "Traits§Spellstore": {
+        "keywords": {
+          "Trait Type": [
+            "Utility"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Tactics 1, Arcane 1 or Divine 1"
+          }
+        },
+        "text": "You may prepare a spell slot to be\nstored on an Entity. When the Entity\nis destroyed, the spell is then cast,\nusing the Entity’s tile as an origin\npoint. Re-preparing the slot dispels\nthe stored spell. If you have the\nTrait Spellblade and a spell is stored\nin your Weapon or ammunition,\nby using a Swift Action you may\nactivate the spell as part of your\nnext Attack. The activated spell is\nconsidered a separate effect from\nthe Attack and does not inherit\nproperties from the Attack such as\nbonus Aim on an Aimed Strike"
+      },
+      "Traits§Stalwart": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Defense 1"
+          }
+        },
+        "text": "Gain +1 Wound. If you begin your\nround under a condition (other\nthan Fatigue), you may reduce the\nvalue of a single Condition by 1\nright before the Refresh Step. If\nthis would reduce it to 0, then the\ncondition is cured. This may be used\nin addition to using Clear"
+      },
+      "Traits§Studied Target": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Strategy 2"
+          }
+        },
+        "text": "If you have been monitoring a Target with the Search Action\nsince your last turn Add 1 Wound\ndamage to Each Attack and +1\nto Any status condition imparted\nagainst that target."
+      },
+      "Traits§Targeting": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, Agility 1"
+          }
+        },
+        "text": "When making an Aimed Strike, you\nmay take a -1 Aim penalty to target\na specific part of a target. If you deal\nat least one Wound, then you may\ninduce additional effects after the\nAttack is resolved. These effects can\nbe cured with the Treat Action or\nClear Action.\n\n• Leg: Reduces opponent speed\nby 2 and increases the Focus\ncost of dodging by 1\n\n• Arm: reduces the force\nthreshold for disarming by 2\nand reduces opponent Aim by\n1\n\n• Head: Causes opponent to\nimmediately lose 1 Focus and 1\nWill."
+      },
+      "Traits§Twin Weapon Fighting": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Offense 1, Agility 1"
+          }
+        },
+        "text": "Every time you would be able to\nmake a Weapon Attack, you may\nmake the Attack with up to 2 of\nyour currently wielded Weapons."
+      },
+      "Traits§Will to Survive": {
+        "keywords": {
+          "Trait Type": [
+            "Combat"
+          ]
+        },
+        "stats": {
+          "Requirements": {
+            "value": "Defense 2, Stalwart"
+          }
+        },
+        "text": "The first instance of Wound damage\nyou take in a round is halved. When\nyou use Duck and Cover Reaction to\nreact, the previous instance of wound\ndamage you’ve taken this turn is\nalso halved, and you can do this in\nresponse to damage that would make\nyou fall unconscious. Gain +1 max\nWill"
+      },
+      "Type§Martial": {
+        "text": "Martials are trained and focus on improving\ntheir own core abilities. At Level 1 Martials\ngain an additional stat increase. They also get\none additional stat increase every even level\nto any stat that is half of their level or lower\n(resolved after their normal increases). trained and focus on improving their own core abilities. At Level 1 Martials\ngain an additional stat increase. They also get one additional stat increase every even level\nto any stat that is half of their level or lower\n(resolved after their normal increases)."
+      },
+      "Type§Operator": {
+        "text": "Operators “just try things” and figure out how\nto use specialized equipment. Operators treat\nany single stat or skill proficiency as one\nhigher for proficiency in using all equipment\nand their abilities\""
+      },
+      "Type§Specialist": {
+        "text": "Specialists are learned and gain access to\nadvanced traits earlier. Specialists may\nignore a single requirement (except for racial\nrequirements) of their choice on all Traits\ngained through normal Levels. For example,\nArcane 1 has a requirement of Utility 1, and\nLevel 2. A Specialist may ignore the Level 2\nrequirement, so that if they have Utility 1, they\ncould gain the Trait at Level 1. They also gain\na bonus Specialization at Level 1."
+      },
+      "Weapon§Bow": {
+        "removed": {
+          "keywords": {
+            "Keywords": [
+              "Grapple",
+              "Quickdraw"
+            ]
+          }
+        },
+        "stats": {
+          "Force": {
+            "value": -1
+          },
+          "Penetration": {
+            "value": 1
+          },
+          "Range": {
+            "value": "20"
+          },
+          "Requirements": {
+            "value": "Technique 2, Dexterity 2"
+          },
+          "Wounds": {
+            "value": 1
+          }
+        }
+      },
+      "Weapon§Dagger": {
+        "stats": {
+          "Force": {
+            "value": -1
+          },
+          "Penetration": {
+            "value": 1
+          },
+          "Range": {
+            "value": "M"
+          },
+          "Requirements": {
+            "value": ""
+          },
+          "Wounds": {
+            "value": 1
+          }
+        }
+      },
+      "Weapon§Improved Unarmed Strike": {
+        "stats": {
+          "Force": {
+            "value": 1
+          },
+          "Penetration": {
+            "value": 1
+          },
+          "Wounds": {
+            "value": 1
+          }
+        }
+      }
+    },
+    "gameModes": {},
+    "theme": {}
+  }
+}
