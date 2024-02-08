@@ -42,16 +42,17 @@
       "Character": {
         "allowed": {
           "classifications": [
-            "Traits",
-            "Slot",
             "Station",
-            "Item Loadout",
+            "Type",
+            "Traits",
             "Skill List",
-            "Type"
+            "Item Loadout",
+            "Slot"
           ]
         },
         "aspects": {
           "Group Includes": true,
+          "Group Traits": true,
           "Rename": true
         },
         "removed": {
@@ -66,7 +67,7 @@
             "statOrder": 3,
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Aim": {
             "dynamic": true,
@@ -74,7 +75,7 @@
             "statOrder": 5,
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Defense": {
             "dynamic": true,
@@ -82,15 +83,15 @@
             "statOrder": 2,
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Deflection": {
             "dynamic": true,
             "group": "Attributes",
             "statOrder": 6,
-            "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
+            "statType": "term",
+            "value": "-1, 1",
+            "visibility": "always"
           },
           "Fatigue": {
             "dynamic": true,
@@ -98,7 +99,7 @@
             "statOrder": 9,
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Focus": {
             "dynamic": true,
@@ -106,15 +107,15 @@
             "statOrder": 3,
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Load": {
             "dynamic": true,
             "group": "Attributes",
             "statOrder": 8,
-            "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
+            "statType": "term",
+            "value": "4 (1)",
+            "visibility": "always"
           },
           "Offense": {
             "dynamic": true,
@@ -122,8 +123,8 @@
             "statOrder": 1,
             "statType": "numeric",
             "tracked": true,
-            "value": 2,
-            "visibility": "normal"
+            "value": 0,
+            "visibility": "always"
           },
           "Speed": {
             "dynamic": true,
@@ -131,7 +132,7 @@
             "statOrder": 4,
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Strategy": {
             "dynamic": true,
@@ -139,7 +140,7 @@
             "statOrder": 5,
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Tactics": {
             "dynamic": true,
@@ -147,7 +148,7 @@
             "statOrder": 4,
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Utility": {
             "dynamic": true,
@@ -155,7 +156,7 @@
             "statOrder": 6,
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Will": {
             "dynamic": true,
@@ -163,7 +164,7 @@
             "statOrder": 3,
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Wounds": {
             "dynamic": true,
@@ -171,7 +172,7 @@
             "statOrder": 1,
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           }
         }
       },
@@ -327,13 +328,13 @@
             "statOrder": 1,
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           },
           "Specialization": {
             "dynamic": true,
             "statType": "numeric",
             "value": 0,
-            "visibility": "normal"
+            "visibility": "always"
           }
         }
       },
@@ -353,6 +354,10 @@
         }
       },
       "Station": {
+        "aspects": {
+          "Group Includes": true,
+          "Group Traits": true
+        },
         "text": ""
       },
       "Storage": {
